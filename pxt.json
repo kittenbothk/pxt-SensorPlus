@@ -1,6 +1,6 @@
 {
-    "name": "pxt-SensorPlus",
-    "version": "0.1.0",
+    "name": "SensorPlus",
+    "version": "0.1.1",
     "description": "KittenbotHK SensorPlus",
     "license": "MIT",
     "dependencies": {
