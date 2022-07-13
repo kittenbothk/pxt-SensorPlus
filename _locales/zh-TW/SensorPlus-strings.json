@@ -1,0 +1,11 @@
+{
+  "SensorPlus.ds18init|block": "初始化水溫感應器|%pin",
+  "SensorPlus.water_temp|block": "獲取水溫|%p",
+  "SensorPlus.Calibrate|block": "校準濁度感應器|%t, %pin",
+  "SensorPlus.Calibrate_notemp|block": "校準濁度感應器|%pin",
+  "SensorPlus.get_ntup|block": "獲取NTU|%pin",
+  "{id:category}SensorPlus": "Plus感應器",
+  "{id:group}SensorPlus": "Plus感應器",
+  "{id:group}Water Temperature Sensor": "水溫感應器",
+  "{id:group}Turbidity Sensor": "污水濁度感應器"
+}
