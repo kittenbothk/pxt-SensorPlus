@@ -36,7 +36,7 @@ let x=0
          }
 
     //% blockId=ds18init block="Init Water Temp Pin %pin"
-    //% group="Water Temperature Sensor" weight=80
+    //% group="Water Temperature Sensor" weight=100
     export function ds18init(pin: DigitalPin) {
         pins.setPull(pin, PinPullMode.PullUp)
     }
@@ -47,7 +47,7 @@ let x=0
     }
 
     //% blockId=temp block="Get Water Temperature Pin %p"
-    //% group="Water Temperature Sensor" weight=83
+    //% group="Water Temperature Sensor" weight=99
     export function water_temp(p: temppin): number {
         temp=Math.round(Temperature(p)/10)
         while(temp>=85) {
@@ -58,7 +58,7 @@ let x=0
     }
 
     //% blockId=calibrate block="Calibrate w/ Temp %t, Pin %pin"
-    //% group="Turbidity Sensor" weight=100
+    //% group="Turbidity Sensor" weight=98
     export function Calibrate(t: number, pin: AnalogPin) {
         temp = t
         x = pins.analogReadPin(pin)
@@ -69,7 +69,7 @@ let x=0
     }
 
     //% blockId=calibrate_notemp block="Calibrate w/o Temp, Pin %pin"
-    //% group="Turbidity Sensor" weight=83
+    //% group="Turbidity Sensor" weight=97
     export function Calibrate_notemp(pin: AnalogPin) {
         x = pins.analogReadPin(pin)
         deltaU = -0.0192*(temp-25)
@@ -78,7 +78,7 @@ let x=0
         K = 865.68*U25
     }
     //% blockId=get_ntu block="Get NTU Pin %pin"
-    //% group="Turbidity Sensor" weight=83
+    //% group="Turbidity Sensor" weight=96
     export function get_ntup(pin: AnalogPin):number {
         x = pins.analogReadPin(pin)
         U = x*5/1024
