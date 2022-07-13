@@ -4,8 +4,8 @@
   "SensorPlus.Calibrate|block": "校准浊度感应器|%t, %pin",
   "SensorPlus.Calibrate_notemp|block": "校准浊度感应器|%pin",
   "SensorPlus.get_ntup|block": "获取NTU|%pin",
-  "{id:category}SensorPlus": "Plus感应器",
-  "{id:group}SensorPlus": "Plus感应器",
+  "{id:category}SensorPlus": "感应器Plus",
+  "{id:group}SensorPlus": "感应器Plus",
   "{id:group}Water Temperature Sensor": "水温感应器",
   "{id:group}Turbidity Sensor": "污水浊度感应器"
 }
