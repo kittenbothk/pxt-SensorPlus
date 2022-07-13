@@ -78,7 +78,7 @@ let x=0
         K = 865.68*U25
     }
     //% blockId=get_ntu block="Get NTU Pin %pin"
-    //% group="Turbidity Sensor weight=83
+    //% group="Turbidity Sensor" weight=83
     export function get_ntup(pin: AnalogPin):number {
         x = pins.analogReadPin(pin)
         U = x*5/1024
