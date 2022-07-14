@@ -11,29 +11,36 @@ let K=0
 let NTU=0
 let x=0
     export enum temppin {
-        //% block=pin0
-        pin0 = 0,
-        //% block=pin1
-        pin1 = 1,
-        //% block=pin2
-        pin2 = 2,
+        //% block=P0
+        P0 = 0,
+        //% block=P1
+        P1 = 1,
+        //% block=P2
+        P2 = 2,
         //% block=pin5
-        pin5 = 5,
+        P5 = 5,
         //% block=pin8
-        pin8 = 8,
+        P8 = 8,
         //% block=pin11
-        pin11 = 11,
+        P11 = 11,
         //% block=pin12
-        pin12 = 12,
+        P12 = 12,
         //% block=pin13
-        pin13 = 13,
+        P13 = 13,
         //% block=pin14
-        pin14 = 14,
+        P14 = 14,
         //% block=pin15
-        pin15 = 15,
+        P15 = 15,
         //% block=pin16
-        pin16 = 16
+        P16 = 16
         }
+
+    export enum lensState {
+        //% block=On
+        on=1,
+        //% block=Off
+        off=0
+    }
 
     //% blockId=ds18init block="Init Water Temp Pin %pin"
     //% group="Water Temperature Sensor" weight=100
@@ -88,5 +95,11 @@ let x=0
         } else {
             return NTU
         }
+    }
+
+    //% blockID=lens_set block="Sugar Lens Pin %pin ,Set %state"
+    //% group="Sugar Lens FPV" weight=95
+    export function lens_set(pin: DigitalPin, state: lensState){
+        pins.digitalWritePin(pin,state)
     }
 }

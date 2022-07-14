@@ -4,6 +4,7 @@
   "SensorPlus.Calibrate|block": "校準濁度感應器 水溫:|%t, %pin",
   "SensorPlus.Calibrate_notemp|block": "校準濁度感應器|%pin",
   "SensorPlus.get_ntup|block": "獲取NTU|%pin",
+  "SensorPlus.lens_set|block": "FPV %pin 設為 %state",
   "{id:category}SensorPlus": "感應器Plus",
   "{id:group}SensorPlus": "感應器Plus",
   "{id:group}Water Temperature Sensor": "水溫感應器",
