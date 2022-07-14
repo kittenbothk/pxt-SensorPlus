@@ -1,7 +1,7 @@
 {
   "SensorPlus.gps_init|block": "初始化GPS模组|Tx(蓝色) %tx|Rx(绿色) %rx",
   "SensorPlus.gps_read|block": "GPS模组获取数据",
-  "SensorPlus.gps_utc|block": "GPS获取时间",
+  "SensorPlus.gps_utc|block": "GPS获取时间 %i",
   "SensorPlus.gps_latitude|block": "GPS获取经度",
   "SensorPlus.gps_longitude|block": "GPS获取纬度",
   "SensorPlus.ds18init|block": "初始化水温传感器|%pin",
