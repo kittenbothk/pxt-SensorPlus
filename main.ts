@@ -1,8 +1,8 @@
 // SensorPlus@KittenBotHK
 
 //% color="#76dbb1" weight=10 icon="\uf2ce"
-//% groups='["ModulesPlus"]'
-namespace ModulesPlus {
+//% groups='["SensorPlus"]'
+namespace SensorPlus {
 let temp=25
 let deltaU=0
 let U=0

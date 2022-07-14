@@ -1,7 +1,7 @@
 {
-    "name": "ModulesPlus",
-    "version": "0.1.4",
-    "description": "KittenbotHK ModulesPlus",
+    "name": "SensorPlus",
+    "version": "0.1.5",
+    "description": "KittenbotHK SensorPlus",
     "license": "MIT",
     "dependencies": {
         "core": "*"
