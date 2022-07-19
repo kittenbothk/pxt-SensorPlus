@@ -10,8 +10,10 @@
   "SensorPlus.Calibrate_notemp|block": "校准浊度传感器|%pin",
   "SensorPlus.get_ntup|block": "获取NTU|%pin",
   "SensorPlus.lens_set|block": "FPV %pin 设为 %state",
+  "SensorPlus.dstemp|block": "獲取水溫(带电阻) %pin",
   "{id:category}SensorPlus": "Modules Plus",
   "{id:group}SensorPlus": "Modules Plus",
   "{id:group}Water Temperature Sensor": "水温传感器",
-  "{id:group}Turbidity Sensor": "污水浊度传感器"
+  "{id:group}Turbidity Sensor": "污水浊度传感器",
+  "{id:group}Resistor Water Temperature Sensor": "带电阻水温传感器"
 }

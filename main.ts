@@ -50,26 +50,10 @@ let latitude=""
         off=0
     }
 
-    //% shim=dstemp::celsius
-    export function celsius(pin: DigitalPin) : number {
-        return 32.6;
-    }
-
     //% blockId=ds18init block="Init Water Temp Pin %pin"
     //% group="Water Temperature Sensor" weight=100
     export function ds18init(pin: DigitalPin) {
         pins.setPull(pin, PinPullMode.PullUp)
-    }
-
-    //% blockId=dstemp block="Get DSTemperature Pin %pin"
-    //% group="Water Temperature Sensor" weight=99
-    export function DSTemperature(pin: DigitalPin): number {
-        temp=celsius(pin)
-        while(temp>=85 || temp<=-300) {
-            temp=celsius(pin)
-            basic.pause(100)
-            }
-        return temp
     }
 
     //% shim=DS18B20::Temperature
@@ -83,6 +67,22 @@ let latitude=""
         temp=Math.round(Temperature(p)/10)
         while(temp>=85) {
             temp=Math.round(Temperature(p)/10)
+            basic.pause(100)
+            }
+        return temp
+    }
+
+    //% shim=dstemp::celsius
+    export function celsius(pin: DigitalPin) : number {
+        return 32.6;
+    }
+
+    //% blockId=dstemp block="Get Water Temperature(Resistor) Pin %pin"
+    //% group="Resistor Water Temperature Sensor" weight=99
+    export function DSTemperature(pin: DigitalPin): number {
+        temp=celsius(pin)
+        while(temp>=85 || temp<=-300) {
+            temp=celsius(pin)
             basic.pause(100)
             }
         return temp
