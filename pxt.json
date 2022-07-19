@@ -1,6 +1,6 @@
 {
     "name": "SensorPlus",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "KittenbotHK SensorPlus",
     "license": "MIT",
     "dependencies": {
@@ -11,6 +11,9 @@
         "main.ts",
         "README.md",
         "ds18b20.cpp",
+        "dstemp.cpp",
+        "shims.d.ts",
+        "enums.d.ts",
         "_locales/zh-TW/SensorPlus-strings.json",
         "_locales/zh-CN/SensorPlus-strings.json"
     ],
