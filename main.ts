@@ -18,16 +18,6 @@ let UTC=""
 let longitude=""
 let latitude=""
 
-//% whenUsed
-let errorHandler:Action = null;
-//% whenUsed
-let errorObjectIdx : number = 0;
-//% whenUsed
-let errorPort : number = -1;
-
-// TODO: Localization
-const errorMsgs  = [ "No Error", "Not Connected", "Start Error", "Read Timeout", "Conversion Failure"];
-
     export enum temppin {
         //% block=P0
         P0 = 0,
@@ -60,7 +50,6 @@ const errorMsgs  = [ "No Error", "Not Connected", "Start Error", "Read Timeout",
         off=0
     }
 
-    //% blockId="celsius" block="temperature on %pin|"
     //% shim=dstemp::celsius
     export function celsius(pin: DigitalPin) : number {
         return 32.6;
@@ -70,6 +59,13 @@ const errorMsgs  = [ "No Error", "Not Connected", "Start Error", "Read Timeout",
     //% group="Water Temperature Sensor" weight=100
     export function ds18init(pin: DigitalPin) {
         pins.setPull(pin, PinPullMode.PullUp)
+    }
+
+    //% blockId=dstemp block="NEW Get DSTemperature Pin %pin"
+    //% group="Water Temperature Sensor" weight=99
+    export function DSTemperature(pin: DigitalPin): number {
+        temp=celsius(pin)
+        return temp
     }
 
     //% shim=DS18B20::Temperature
