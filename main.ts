@@ -61,10 +61,14 @@ let latitude=""
         pins.setPull(pin, PinPullMode.PullUp)
     }
 
-    //% blockId=dstemp block="NEW Get DSTemperature Pin %pin"
+    //% blockId=dstemp block="Get DSTemperature Pin %pin"
     //% group="Water Temperature Sensor" weight=99
     export function DSTemperature(pin: DigitalPin): number {
         temp=celsius(pin)
+        while(temp>=85 || temp<=-300) {
+            temp=celsius(pin)
+            basic.pause(100)
+            }
         return temp
     }
 
