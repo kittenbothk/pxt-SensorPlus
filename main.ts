@@ -85,7 +85,8 @@ let latitude=""
             temp=celsius(pin)
             basic.pause(100)
             }
-        return temp
+
+        return Math.round(temp)
     }
 
     //% blockId=calibrate block="Calibrate w/ Temp %t, Pin %pin"
