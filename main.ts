@@ -291,6 +291,13 @@ let DS1307_REG_RAM = 8
     }
 
     /**
+     * get Second
+     */
+    function getSecond(): number {
+        return Math.min(HexToDec(getReg(DS1307_REG_SECOND)), 59)
+    }
+
+    /**
      * set Date and Time
      * @param year is the Year will be set, eg: 2022
      * @param month is the Month will be set, eg: 10
