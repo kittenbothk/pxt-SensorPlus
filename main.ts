@@ -391,7 +391,7 @@ let DS1307_REG_RAM = 8
         setReg(DS1307_REG_SECOND, DecToHex(dat % 60))
     }
 
-    //% blockId="DS1307_GET_DATE" block="date"
+    //% blockId="DS1307_GET_DATE" block="date %reg"
     //% group="Clock Module" weight=64
     export function getDate(reg: date_reg): number {
         if (reg == DS1307_REG_YEAR){
