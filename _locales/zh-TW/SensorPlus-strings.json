@@ -11,9 +11,21 @@
   "SensorPlus.get_ntup|block": "獲取NTU|%pin",
   "SensorPlus.lens_set|block": "FPV %pin 設為 %state",
   "SensorPlus.DSTemperature|block": "獲取水溫(帶電阻) %pin",
+  "SensorPlus.start|block": "啟動時鐘",
+  "SensorPlus.stop|block": "停止時鐘",
+  "SensorPlus.DateTime|block": "設定時間 年 %year|月 %month|日 %day|週日 %weekday|時 %hour|分 %minute|秒 %second",
+  "SensorPlus.getDate|block": "獲取時間 %reg",
+  "SensorPlus.date_reg.year|block": "年",
+  "SensorPlus.date_reg.month|block": "月",
+  "SensorPlus.date_reg.day|block": "日",
+  "SensorPlus.date_reg.weekday|block": "週日",
+  "SensorPlus.date_reg.hour|block": "時",
+  "SensorPlus.date_reg.minute|block": "分",
+  "SensorPlus.date_reg.second|block": "秒",
   "{id:category}SensorPlus": "Modules Plus",
   "{id:group}SensorPlus": "Modules Plus",
   "{id:group}Water Temperature Sensor": "水溫感應器",
   "{id:group}Turbidity Sensor": "污水濁度感應器",
-  "{id:group}Resistor Water Temperature Sensor": "帶電阻水溫感應器"
+  "{id:group}Resistor Water Temperature Sensor": "帶電阻水溫感應器",
+  "{id:group}Clock Module": "時鐘模組"
 }

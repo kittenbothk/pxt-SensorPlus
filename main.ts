@@ -31,19 +31,19 @@ let DS1307_REG_RAM = 8
 
     export enum date_reg {
     //% block=year
-    Year = 6,
+    year = 6,
     //% block=month
-    Month = 5,
+    month = 5,
     //% block=day
-    Day = 4,
+    day = 4,
     //% block=weekday
-    Weekday = 3,
+    weekday = 3,
     //% block=hour
-    Hour = 2,
+    hour = 2,
     //% block=minute
-    Minute = 1,
+    minute = 1,
     //% block=second
-    Second = 0
+    second = 0
     }
 
     export enum temppin {
@@ -315,82 +315,6 @@ let DS1307_REG_RAM = 8
         pins.i2cWriteBuffer(DS1307_I2C_ADDR, buf)
     }
 
-    /**
-     * set year
-     * @param dat is the Year will be set, eg: 2022
-     */
-    //% blockId="DS1307_SET_YEAR" block="set year %dat"
-    //% group="Clock Module" weight=71
-    export function setYear(dat: number): void {
-        setReg(DS1307_REG_YEAR, DecToHex(dat % 100))
-    }
-
-    /**
-     * set month
-     * @param dat is Month will be set.  eg: 10
-     */
-    //% blockId="DS1307_SET_MONTH" block="set month %dat"
-    //% dat.min=1 dat.max=12
-    //% group="Clock Module" weight=70
-    export function setMonth(dat: number): void {
-        setReg(DS1307_REG_MONTH, DecToHex(dat % 13))
-    }
-
-    /**
-     * set day
-     * @param dat is the Day will be set, eg: 15
-     */
-    //% blockId="DS1307_SET_DAY" block="set day %dat"
-    //% dat.min=1 dat.max=31
-    //% group="Clock Module" weight=69
-    export function setDay(dat: number): void {
-        setReg(DS1307_REG_DAY, DecToHex(dat % 32))
-    }
-
-    /**
-     * set weekday
-     * @param dat is the Week Day will be set, eg: 6
-     */
-    //% blockId="DS1307_SET_WEEKDAY" block="set weekday %dat"
-    //% dat.min=1 dat.max=7
-    //% group="Clock Module" weight=68
-    export function setWeekday(dat: number): void {
-        setReg(DS1307_REG_WEEKDAY, DecToHex(dat % 8))
-    }
-
-    /**
-     * set hour
-     * @param dat is the Hour will be set, eg: 16
-     */
-    //% blockId="DS1307_SET_HOUR" block="set hour %dat"
-    //% group="Clock Module" weight=67
-    //% dat.min=0 dat.max=23
-    export function setHour(dat: number): void {
-        setReg(DS1307_REG_HOUR, DecToHex(dat % 24))
-    }
-
-    /**
-     * set minute
-     * @param dat is the Minute will be set, eg: 30
-     */
-    //% blockId="DS1307_SET_MINUTE" block="set minute %dat"
-    //% group="Clock Module" weight=66
-    //% dat.min=0 dat.max=59
-    export function setMinute(dat: number): void {
-        setReg(DS1307_REG_MINUTE, DecToHex(dat % 60))
-    }
-
-    /**
-     * set second
-     * @param dat is the Second will be set, eg: 0
-     */
-    //% blockId="DS1307_SET_SECOND" block="set second %dat"
-    //% group="Clock Module" weight=65
-    //% dat.min=0 dat.max=59
-    export function setSecond(dat: number): void {
-        setReg(DS1307_REG_SECOND, DecToHex(dat % 60))
-    }
-
     //% blockId="DS1307_GET_DATE" block="date %reg"
     //% group="Clock Module" weight=64
     export function getDate(reg: date_reg): number {
@@ -399,68 +323,5 @@ let DS1307_REG_RAM = 8
         } else {
         return HexToDec(getReg(reg))
         }
-    }
-
-    /**
-     * get Year
-     */
-    //% blockId="DS1307_GET_YEAR" block="year"
-    //% group="Clock Module" weight=64
-    export function getYear(): number {
-        return Math.min(HexToDec(getReg(DS1307_REG_YEAR)), 99) + 2000
-    }
-
-    /**
-     * get Month
-     */
-    //% blockId="DS1307_GET_MONTH" block="month"
-    //% group="Clock Module" weight=63
-    export function getMonth(): number {
-        return Math.max(Math.min(HexToDec(getReg(DS1307_REG_MONTH)), 12), 1)
-    }
-
-    /**
-     * get Day
-     */
-    //% blockId="DS1307_GET_DAY" block="day"
-    //% group="Clock Module" weight=62
-    export function getDay(): number {
-        return Math.max(Math.min(HexToDec(getReg(DS1307_REG_DAY)), 31), 1)
-    }
-
-    /**
-     * get Week Day
-     */
-    //% blockId="DS1307_GET_WEEKDAY" block="weekday"
-    //% group="Clock Module" weight=61
-    export function getWeekday(): number {
-        return Math.max(Math.min(HexToDec(getReg(DS1307_REG_WEEKDAY)), 7), 1)
-    }
-
-    /**
-     * get Hour
-     */
-    //% blockId="DS1307_GET_HOUR" block="hour"
-    //% group="Clock Module" weight=60
-    export function getHour(): number {
-        return Math.min(HexToDec(getReg(DS1307_REG_HOUR)), 23)
-    }
-
-    /**
-     * get Minute
-     */
-    //% blockId="DS1307_GET_MINUTE" block="minute"
-    //% group="Clock Module" weight=59
-    export function getMinute(): number {
-        return Math.min(HexToDec(getReg(DS1307_REG_MINUTE)), 59)
-    }
-
-    /**
-     * get Second
-     */
-    //% blockId="DS1307_GET_SECOND" block="second"
-    //% group="Clock Module" weight=58
-    export function getSecond(): number {
-        return Math.min(HexToDec(getReg(DS1307_REG_SECOND)), 59)
     }
 }
