@@ -331,4 +331,12 @@ let DS1307_REG_RAM = 8
         return HexToDec(getReg(reg))
         }
     }
+
+    /**
+     * set second
+     * @param dat is the Second will be set, eg: 0
+     */
+    function setSecond(dat: number): void {
+        setReg(DS1307_REG_SECOND, DecToHex(dat % 60))
+    }
 }
