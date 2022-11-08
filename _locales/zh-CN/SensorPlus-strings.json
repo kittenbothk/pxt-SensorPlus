@@ -22,10 +22,17 @@
   "SensorPlus.date_reg.hour|block": "时",
   "SensorPlus.date_reg.minute|block": "分",
   "SensorPlus.date_reg.second|block": "秒",
+  "SensorPlus.initKittenFinger|block": "初始化指纹识别模组 RX %txpin TX %rxpin 触碰感应 %touchpin",
+  "SensorPlus.fingersearch|block": "获取指纹ID",
+  "SensorPlus.waitfinger|block": "等待手指松开",
+  "SensorPlus.savefinger|block": "保存指纹ID|%value",
+  "SensorPlus.deletefinger|block": "删除指纹ID|%value",
+  "SensorPlus.fingertouch|block": "感应到手指",
   "{id:category}SensorPlus": "Modules Plus",
   "{id:group}SensorPlus": "Modules Plus",
   "{id:group}Water Temperature Sensor": "水温感应器",
   "{id:group}Turbidity Sensor": "污水浊度感应器",
   "{id:group}Resistor Water Temperature Sensor": "带电阻水温感应器",
-  "{id:group}Clock Module": "时钟模组"
+  "{id:group}Clock Module": "时钟模组",
+  "{id:group}FingerPrint": "指纹感应器"
 }
