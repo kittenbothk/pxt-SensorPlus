@@ -1,6 +1,6 @@
 {
-    "name": "SensorPlus",
-    "version": "0.3.3",
+    "name": "Modules Plus",
+    "version": "0.3.4",
     "description": "KittenbotHK ModulesPlus",
     "license": "MIT",
     "dependencies": {
@@ -16,13 +16,13 @@
         "enums.d.ts",
         "_locales/zh-TW/SensorPlus-strings.json",
         "_locales/zh-CN/SensorPlus-strings.json",
-        "_locales/SensorPlus-strings.json"
+        "_locales/en/SensorPlus-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "2.3.70",
+        "target": "5.0.12",
         "targetId": "microbit"
     },
     "supportedTargets": [
