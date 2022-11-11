@@ -1,6 +1,6 @@
 {
     "name": "Modules Plus",
-    "version": "0.3.4",
+    "version": "v0.3.5",
     "description": "KittenbotHK ModulesPlus",
     "license": "MIT",
     "dependencies": {
@@ -14,9 +14,9 @@
         "dstemp.cpp",
         "shims.d.ts",
         "enums.d.ts",
-        "_locales/zh-TW/SensorPlus-strings.json",
-        "_locales/zh-CN/SensorPlus-strings.json",
-        "_locales/en/SensorPlus-strings.json"
+        "_locales/zh-TW/ModulePlus-strings.json",
+        "_locales/zh-CN/ModulePlus-strings.json",
+        "_locales/en/ModulePlus-strings.json"
     ],
     "testFiles": [
         "test.ts"
